@@ -1,3 +1,6 @@
+/**
+ *	First c program
+ */
 #include <stdio.h>
 
 main(){

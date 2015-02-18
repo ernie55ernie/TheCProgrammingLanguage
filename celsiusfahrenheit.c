@@ -1,3 +1,6 @@
+/**
+ *	Fahrenheit-Celsius table and Celsius-Fahrenheit table
+ */
 #include <stdio.h>
 
 main(){
