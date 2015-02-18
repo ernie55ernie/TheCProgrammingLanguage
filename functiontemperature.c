@@ -13,9 +13,9 @@ float FtoC(float f);
 
  	float fahrenheit;
 
- 	printf();
+ 	printf("F\tC\n");
  	for(fahrenheit = LOWER; fahrenheit < UPPER; fahrenheit += STEP){
- 		printf("%3.0f%6.1f", fahrenheit, FtoC(fahrenheit));
+ 		printf("%3.0f\t%6.1f\n", fahrenheit, FtoC(fahrenheit));
  	}
 
  }
