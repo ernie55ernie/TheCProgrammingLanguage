@@ -23,7 +23,7 @@ main(){
 		}
 	}
 	if(max > 0)		/* there was a line */
-		printf("%s", longest);
+		printf("length: %d, content: %s", max, longest);
 	return 0;
 }
 
