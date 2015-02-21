@@ -4,6 +4,7 @@
  *	of the various float-point types.
  */
 #include <stdio.h>
+#include <float.h>
 
 main(){
 	int i, j;
@@ -60,7 +61,7 @@ main(){
 			break;
 		m = l;
 	}
-	printf("\tloewr limit: %d\n", m);
+	printf("\tlower limit: %d\n", m);
 
 	signed g, h;
 	for(g = 0, h = g;; ++g){
@@ -80,13 +81,28 @@ main(){
 	for(u = 0, v = u;; ++u){
 		if(u < v)
 			break;
-		u = v;
+		v = u;
 	}
-	printf("unsignedupper limit: %d\n", v);
+	printf("unsignedupper limit: %u\n", v);
 	for(u = 0, v = u;; --u){
 		if(u > v)
 			break;
-		u = v;
+		v = u;
 	}
-	printf("\tlower limit: %d\n", v);
+	printf("\tlower limit: %u\n", v);
+
+	/*float f, e;
+	for(f = 0, e = f;; ++f){
+		if(f < e)
+			break;
+		e = f;
+	}*/
+	printf("float\tupper limit: %f\n", FLT_MAX);
+	/*for(f = 0, e = f;; --f){
+		if(e > f)
+			break;
+		f = e;
+	}*/
+	printf("\tlower limit: %f\n", FLT_MIN);
+
 }
