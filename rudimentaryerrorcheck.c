@@ -11,7 +11,7 @@ main(){
 	int c;
 
 	/* Get characters from file */
-	f = freopen("hello.c", "r", stdin);
+	f = freopen("syntaxcheck.c", "r", stdin);
 	while((c = getchar()) != EOF){
 		putchar(c);
 	}

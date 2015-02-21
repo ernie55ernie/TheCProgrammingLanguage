@@ -21,7 +21,7 @@ main(){
 	int n;
 
 	/* Get characters from file */
-	f = freopen("hello.c", "r", stdin);
+	f = freopen("syntaxcheck.c", "r", stdin);
 	while((n = getline(cl ,MAXLINE)) > 0){
 		printline(cl, n);
 	}
