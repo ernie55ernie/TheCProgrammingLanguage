@@ -4,3 +4,17 @@
  *	Quotes, both single and double, escape sequence,
  *	and comments.
  */
+#include <stdio.h>
+
+main(){
+	FILE *f;
+	int c;
+
+	/* Get characters from file */
+	f = freopen("hello.c", "r", stdin);
+	while((c = getchar()) != EOF){
+		putchar(c);
+	}
+
+	fclose(f);
+}
