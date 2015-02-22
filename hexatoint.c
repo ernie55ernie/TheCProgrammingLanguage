@@ -16,7 +16,11 @@ main(){
 	char line[MAXLINE];
 	int i = 0, d = 0;
 
-	while((i = gethexa(line, MAXLINE)) > 0){
+	while((i = gethexa(line, MAXLINE)) > 0 || i == -1){
+		if(i == -1){
+			printf("Invalid hexadecimal number\n");
+			continue;
+		}
 		d = htoi(line, i);
 		printhexa(line, i);
 		printf(" is equivalent to %d\n", d);
@@ -27,10 +31,15 @@ main(){
 int gethexa(char hexa[], int maxline){
 	int i, c;
 	for(i = 0; i < MAXLINE && (c = getchar()) != '\n' && c != EOF; ++i){
+		if((c > '9' && c < '0') &&
+		 (c > 'z' && c < 'a') && 
+		 (c > 'Z' && c < 'A'))
+			return -1;
 		hexa[i] = c;
 	}
 	if(c == '\n') hexa[i++] = '\n';
 	hexa[i] = '\0';
+	if(hexa[0] != '0' || (hexa[1] != 'x' && hexa[1] != 'X'))return -1;
 	return i;
 }
 
