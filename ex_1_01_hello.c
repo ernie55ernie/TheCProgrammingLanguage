@@ -5,4 +5,6 @@
 
 main(){
 	printf("hello, world\n");
+
+	printf("hello \b");
 }

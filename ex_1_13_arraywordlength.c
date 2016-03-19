@@ -26,10 +26,10 @@
 	printf("\t");
  	for(i = 1; i <= 20; i++)printf("%3d",i);
  	printf("\n");
- 	for(i = 0; i < 20; i++){
+ 	for(i = 1; i < 20; i++){
  		printf("%d\t", i);
  		for(j = 0; j < hist[i]; j++){
- 			printf("  -");
+ 			printf("---");
  		}
  		printf("\n");
  	}
@@ -43,9 +43,9 @@
  				printf("%3d", j);
  			}
  		}
- 		printf("\t%3d", i);
- 		for(j = 0; j < 20 && i != 20; j++){
- 			if((hist[j] + i) >= 20){
+ 		printf("\t%3d", 20 - i);
+ 		for(j = 1; j < 20 && i != 20; j++){
+ 			if((hist[j] + i) > 19){
  				printf("  |");
  			}else{
  				printf("   ");
